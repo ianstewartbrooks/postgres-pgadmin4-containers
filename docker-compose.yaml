@@ -17,7 +17,7 @@ services:
     depends_on:
       - database
     ports:
-      - "5555:80"
+      - 5555:80
     env_file:
       - pgadmin.env
     volumes:

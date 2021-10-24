@@ -1,9 +1,9 @@
 # Postgres & PGAdmin4 script
 
-This docker-compose script creates a postgres and pgadmin4 container.
+This docker-compose script creates a container for postgres and onother one for pgadmin4.
 
 ## Setup
-Changes the values in the .env files to your liking before running docker-compose up -d
+Change the values in the .env files to your liking before running ```docker-compose up -d```
 
 ## Useful commandline commands
 
