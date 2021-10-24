@@ -1,0 +1,28 @@
+version: '3'
+services:
+  postgres:
+    image: "postgres"
+    container_name: postgres_container
+    env_file:
+      - postgres.env
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres-data:/var/lib/postgresql/data/
+    restart: unless-stopped  
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_container
+    depends_on:
+      - database
+    ports:
+      - "5555:80"
+    env_file:
+      - pgadmin.env
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    restart: unless-stopped
+volumes:
+  postgres-data:
+  pgadmin-data: 
