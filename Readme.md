@@ -13,4 +13,4 @@ Access docker container from commandline
 
 Connect to postgres from inside of the container
 
-```psql --host=database --username=postgres -- dbname=postgres```
+```psql --host=postgres --username=postgres -- dbname=postgres```
